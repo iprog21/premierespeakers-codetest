@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :initialize_products, only: [:index]
 
   def index
-    
+  
   end
 
   def initialize_products
@@ -76,5 +76,25 @@ class HomeController < ApplicationController
 
     @books = Book.all
   end
+
+  # for the third question
+
+  # code looks good, but 2 things i noticed
+  # 1. @start_time and @end_time are not converted to right format? it should converted before passing to method
+  # or can be converted inside the totals_summary method.
+  # 2. why the variable was instance "@" so meaning it will be available on views?
+
+  # def comparison
+  #   @summary = Order.active.approved.totals_summary(@start_time, @end_time, "BB")
+  #   @summary_compare = Order.active.approved.totals_summary(@start_time - 1.year, @end_time - 1.year, "BB")
+  
+  #   if @summary_compare.total.to_f < @summary.total.to_f
+  #     @change = @summary.total.to_f - @summary_compare.total.to_f
+  #     @summary_pct_change = "#{((@change / (@summary_compare.total.to_f.zero? ? 1 : @summary_compare.total).to_f) * 100).round}% Higher"
+  #   else
+  #     @change = @summary_compare.total.to_f - @summary.total.to_f
+  #     @summary_pct_change = "#{((@change / (@summary_compare.total.to_f.zero? ? 1 : @summary_compare.total).to_f) * 100).round}% Lower"
+  #   end
+  # end
 
 end

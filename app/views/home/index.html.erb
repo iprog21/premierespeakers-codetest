@@ -1,1 +1,42 @@
-Premiere Speakers Code Test
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Premiere Speakers Code Test
+      </h1>
+      <!-- <h2>Do whatever you want when you want to.</h2> -->
+      <div class="ui huge primary button">Add new Product <i class="right arrow icon"></i></div>
+    </div>
+  </div>
+<br><br>  
+  <% @products.each do |product| %>
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header"><%= product.title %></h3>
+          <p><%= truncate(product.description, :length => 300)  %></p>
+         
+        </div>
+        <div class="six wide right floated column">
+          <%= image_tag product.media_file.nil? ? 'no-image' : product.media_file, class: "ui small bordered rounded image" %>
+          <!-- <img src="#" class="ui large bordered rounded image"> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <a class="ui small button">View Product</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <% end %>
+
+<!-- 
+ -->
+
+
+</div>

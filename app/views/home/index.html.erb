@@ -8,17 +8,22 @@
         Premiere Speakers Code Test
       </h1>
       <!-- <h2>Do whatever you want when you want to.</h2> -->
-      <div class="ui huge primary button">Add new Product <i class="right arrow icon"></i></div>
+      <%= link_to new_book_path do %>
+        <div class="ui huge primary button">Add new Product <i class="right arrow icon"></i></div>
+      <% end %>
     </div>
   </div>
 <br><br>  
-  <% @products.each do |product| %>
+  <% @books.each do |product| %>
   <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header"><%= product.title %></h3>
-          <p><%= truncate(product.description, :length => 300)  %></p>
+          <h3 class="ui header"><%= product.title %> </h3>
+          <p>
+            <strong for="Price">Price:</strong>  $<%= product.price %>
+          </p>
+          <p><%= truncate(product.description, :length => 300)  %> </p>
          
         </div>
         <div class="six wide right floated column">
@@ -28,15 +33,11 @@
       </div>
       <div class="row">
         <div class="center aligned column">
-          <a class="ui small button">View Product</a>
+          <%= link_to 'View Product', product, class: 'ui button small blue' %>
         </div>
       </div>
     </div>
   </div> 
   <% end %>
-
-<!-- 
- -->
-
 
 </div>

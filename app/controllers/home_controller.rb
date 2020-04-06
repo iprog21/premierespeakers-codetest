@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def initialize_products
-    if Product.count == 0
+    if Book.count == 0
       xml_file = Rails.root.join('data','ACdelta20061pt2.xml')
       xml_data = File.open(xml_file)
       hash = Hash.from_xml(xml_data)['ONIXmessage'];
@@ -66,17 +66,15 @@ class HomeController < ApplicationController
         end
         product.media_file = xml_product['mediafile']['f117'] rescue nil
         
-        model_product = Product.new
-        if !Product.exists?(isbn: product.isbn)
+        model_product = Book.new
+        if !Book.exists?(isbn: product.isbn)
           model_product.attributes = product.marshal_dump
           model_product.save
         end
-        
-        # @products << product
       end
     end
 
-    @products = Product.all
+    @books = Book.all
   end
 
 end

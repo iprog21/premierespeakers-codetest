@@ -1,0 +1,141 @@
+
+
+
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        <%=  @book.title %>
+      </h1>
+    </div>
+  </div>
+  <div class="ui container">
+    <%= image_tag  @book.media_file.nil? ? 'no-image' :  @book.media_file, class: "ui medium bordered rounded image centered" %>
+    <table class="ui celled striped table">
+      <thead>
+        <tr><th colspan="3">
+          Book Information
+          <p id="notice"><%= notice %></p>
+        </th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> ISBN
+          </td>
+          <td> <%= @book.isbn %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Subtitle
+          </td>
+          <td> <%= @book.subtitle %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Publishing status
+          </td>
+          <td> <%= @book.publishing_status %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Language
+          </td>
+          <td> <%= @book.language %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Publishing name
+          </td>
+          <td> <%= @book.publisher_name %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Author
+          </td>
+          <td> <%= @book.author %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i>Number of pages
+          </td>
+          <td> <%= @book.number_of_pages %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Publishing date
+          </td>
+          <td> <%= @book.publication_date %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Product form
+          </td>
+          <td> <%= @book.author %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Price
+          </td>
+          <td> <%= @book.author %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Description
+          </td>
+          <td> <%= @book.description %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Height
+          </td>
+          <td> <%= @book.height %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Length
+          </td>
+          <td> <%= @book.length %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Width
+          </td>
+          <td> <%= @book.width %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Weight
+          </td>
+          <td> <%= @book.weight %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Bisac code
+          </td>
+          <td> <%= @book.bisac_code %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Bisac code2
+          </td>
+          <td> <%= @book.bisac_code2 %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Bisac code3
+          </td>
+          <td> <%= @book.bisac_code3 %></td>
+        </tr>
+        <tr>
+          <td class="collapsing">
+            <i class="book icon"></i> Action
+          </td>
+          <td>             
+            <%= link_to 'Edit', edit_book_path(@book), class: 'ui button small green' %> 
+            <%= link_to 'Back', books_path, class: 'ui button small' %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+

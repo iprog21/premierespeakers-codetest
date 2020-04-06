@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: MyString
+  title: MyString
+  subtitle: MyString
+  publishing_status: MyString
+  language: MyString
+  publisher_name: MyString
+  author: MyString
+  number_of_pages: MyString
+  publication_date: MyString
+  product_form: MyString
+  price: MyString
+  description: MyText
+  height: MyString
+  length: MyString
+  width: MyString
+  weight: MyString
+  bisac_code: MyString
+  bisac_code2: MyString
+  bisac_code3: MyString
+  media_file: MyString
+
+two:
+  isbn: MyString
+  title: MyString
+  subtitle: MyString
+  publishing_status: MyString
+  language: MyString
+  publisher_name: MyString
+  author: MyString
+  number_of_pages: MyString
+  publication_date: MyString
+  product_form: MyString
+  price: MyString
+  description: MyText
+  height: MyString
+  length: MyString
+  width: MyString
+  weight: MyString
+  bisac_code: MyString
+  bisac_code2: MyString
+  bisac_code3: MyString
+  media_file: MyString
